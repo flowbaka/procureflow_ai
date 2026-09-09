@@ -1,6 +1,12 @@
 from sqlalchemy import URL, create_engine, text
 
 from app.config import settings
+from sqlalchemy.orm import DeclarativeBase
+
+
+# Shared parent class for all database models
+class Base(DeclarativeBase):
+    pass
 
 
 # Build the database connection address
